@@ -8,32 +8,31 @@ const getStars = async() => {
     let starsData = await fetch(stars);
     let jsonData = await starsData.json()
 
-    //console.log(jsonData)
-    //console.log(jsonData.bodies.length)
-    // jsonData.bodies.map(body =>{
-    //     console.log(body.name)
-    //     return body.name
-    // })
-
+   
     for(let i=0; i < jsonData.bodies.length ; i++){
         allStars.push(jsonData.bodies[i].name)
-        //console.log(jsonData.bodies[i].name)
-        //console.log(allStars[i])
     }
 
     console.log(allStars)
+    console.log(allStars[0])
+
+    allStars.forEach(star =>{
+        const nameStar = document.createElement('p') 
+        const nameS = document.createTextNode(star)
+        nameStar.appendChild(nameS)
+        document.body.appendChild(nameStar)
+    })
 }
 getStars()
 
-const createTable = async (arr) =>{
-    table.innerHTML = `<tr>
-    <th>Star Name</th>
-    </tr>`
 
-    for(let i = 0; i < arr.length; i++){
-        let newRow = document.createElement('tr')
-        
-        let name = document.createElement('td')
-        name.textContent = arr[i]
-    }
-}
+
+const elem = document.createElement('div')
+const elemText = document.createTextNode('hi2 netta')
+elem.appendChild(elemText)
+document.body.appendChild(elem)
+
+elem.classList.add('heading')
+elem.id = "newDiv"
+
+
