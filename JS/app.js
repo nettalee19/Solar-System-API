@@ -30,12 +30,12 @@ const getStars = async() => {
     //     document.body.appendChild(nameStar)
     // })
 
-    // commonName.forEach(star =>{
-    //     const nameStar = document.createElement('p') 
-    //     const nameS = document.createTextNode(star)
-    //     nameStar.appendChild(nameS)
-    //     document.body.appendChild(nameStar)
-    // })
+    commonName.forEach(star =>{
+        const nameStar = document.createElement('p') 
+        const nameS = document.createTextNode(star)
+        nameStar.appendChild(nameS)
+        document.body.appendChild(nameStar)
+    })
 
    
 
